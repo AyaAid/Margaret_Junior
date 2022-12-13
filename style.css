@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html body{
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.card{
+    display: flex;
+    margin:0 auto;
+    width: 320px;
+    height: 240px;
+    perspective: 1000px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+.card-front, .card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 black;
+}
+
+#card-front1{
+    background-image: url('images/musique.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front2{
+    background-image: url('images/musee.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front3{
+    background-image: url('images/cinema.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front4{
+    background-image: url('images/litterature.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front5{
+    background-image: url('images/gaming1.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front6{
+    background-image: url('images/media.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front7{
+    background-image: url('images/musee.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#card-front8{
+    background-image: url('images/spectacle.jpeg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.card-front::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: linear-gradient(0deg,black,transparent);
+
+}
+.card-front .card-content{
+    z-index: 1;
+    color: white;
+}
+.card-front .card-content p{
+    color: #ecececec;
+}
+.card-back{
+    transform: rotateY(180deg);
+    background: #FFC0CB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.card-back #card-image{
+    width: 80px;
+    height: 80px;
+    border: #FFC0CB;
+    border-radius: 100%;
+    background-image: url('images/plus.png');
+    background-size: cover;
+    background-position: center center;
+}
+
+.card-back h3{
+    padding-top: 10%;
+}
+.card-front{
+    transition: opacity .6s;
+}
+.card:hover  .card-front{
+    opacity: 0;
+}
